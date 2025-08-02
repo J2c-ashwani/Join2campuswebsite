@@ -23,5 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm install --legacy-peer-deps
 
+      - name: Ensure ESLint is installed
+        run: npm install eslint eslint-config-next --save-dev --legacy-peer-deps
+
       - name: Build project
         run: npm run build
+
+      - name: Run lint
+        run: npm run lint -- --fix

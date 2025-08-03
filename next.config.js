@@ -28,7 +28,7 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
-    unoptimized: false, // Enable optimization for better performance
+    unoptimized: false,
   },
   async headers() {
     return [
@@ -41,8 +41,8 @@ const nextConfig = {
           },
         ],
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;

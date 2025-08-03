@@ -14,20 +14,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install
 
-      - name: Ensure ESLint is installed
-        run: npm install eslint eslint-config-next --save-dev --legacy-peer-deps
+      - name: Run ESLint (ignore warnings)
+        run: |
+          npm run lint -- --fix || echo "ESLint completed with warnings"
+
+      - name: Run TypeScript type check (ignore warnings)
+        run: |
+          npm run type-check || echo "Type check completed with warnings"
 
       - name: Build project
         run: npm run build
-
-      - name: Run lint (non-blocking)
-        run: npm run lint -- --fix || echo "Lint warnings ignored"

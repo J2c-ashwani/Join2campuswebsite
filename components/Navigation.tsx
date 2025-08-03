@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 
 export default function Navigation() {
   const pathname = usePathname()
@@ -15,9 +16,19 @@ export default function Navigation() {
   return (
     <nav className="bg-white shadow-md p-4 sticky top-0 z-50 rounded-b-lg">
       <div className="container mx-auto flex justify-between items-center flex-wrap">
-        <Link href="/" className="text-2xl font-bold text-indigo-700 cursor-pointer">
-          Join2Campus
+        {/* Logo + Site Name (Clickable) */}
+        <Link href="/" className="flex items-center space-x-3 cursor-pointer">
+          <Image
+            src="/loggo.png"
+            alt="Join2Campus Logo"
+            width={40}
+            height={40}
+            priority
+          />
+          <span className="text-2xl font-bold text-indigo-700">Join2Campus</span>
         </Link>
+
+        {/* Desktop Nav Links */}
         <div className="space-x-4 hidden md:flex">
           <Link
             href="/"
@@ -76,7 +87,8 @@ export default function Navigation() {
             Contact
           </Link>
         </div>
-        {/* Mobile Menu Button (for future implementation) */}
+
+        {/* Mobile Menu Button */}
         <button className="md:hidden p-2 rounded-md text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-500">
           <svg
             className="w-6 h-6"

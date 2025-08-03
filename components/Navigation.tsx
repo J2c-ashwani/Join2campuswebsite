@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { usePathname } from "next/navigation"
 import Image from "next/image"
+import { usePathname } from "next/navigation"
 
 export default function Navigation() {
   const pathname = usePathname()
@@ -15,77 +15,42 @@ export default function Navigation() {
 
   return (
     <nav className="bg-white shadow-md p-4 sticky top-0 z-50 rounded-b-lg">
-      <div className="container mx-auto flex justify-between items-center flex-wrap">
-        {/* Logo + Site Name (Clickable) */}
-        <Link href="/" className="flex items-center space-x-3 cursor-pointer">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo + Text */}
+        <Link href="/" className="flex items-center space-x-2">
           <Image
             src="/loggo.png"
             alt="Join2Campus Logo"
             width={40}
             height={40}
-            priority
+            className="h-10 w-auto"
           />
           <span className="text-2xl font-bold text-indigo-700">Join2Campus</span>
         </Link>
 
-        {/* Desktop Nav Links */}
+        {/* Desktop Menu */}
         <div className="space-x-4 hidden md:flex">
-          <Link
-            href="/"
-            className={`transition duration-300 ${
-              isActive("/") ? "text-indigo-700 font-semibold" : "text-gray-600 hover:text-indigo-700"
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/about"
-            className={`transition duration-300 ${
-              isActive("/about") ? "text-indigo-700 font-semibold" : "text-gray-600 hover:text-indigo-700"
-            }`}
-          >
-            About Us
-          </Link>
-          <Link
-            href="/team"
-            className={`transition duration-300 ${
-              isActive("/team") ? "text-indigo-700 font-semibold" : "text-gray-600 hover:text-indigo-700"
-            }`}
-          >
-            Our Team
-          </Link>
-          <Link
-            href="/services"
-            className={`transition duration-300 ${
-              isActive("/services") ? "text-indigo-700 font-semibold" : "text-gray-600 hover:text-indigo-700"
-            }`}
-          >
-            Our Services
-          </Link>
-          <Link
-            href="/countries"
-            className={`transition duration-300 ${
-              isActive("/countries") ? "text-indigo-700 font-semibold" : "text-gray-600 hover:text-indigo-700"
-            }`}
-          >
-            Countries
-          </Link>
-          <Link
-            href="/testimonials"
-            className={`transition duration-300 ${
-              isActive("/testimonials") ? "text-indigo-700 font-semibold" : "text-gray-600 hover:text-indigo-700"
-            }`}
-          >
-            Testimonials
-          </Link>
-          <Link
-            href="/contact"
-            className={`transition duration-300 ${
-              isActive("/contact") ? "text-indigo-700 font-semibold" : "text-gray-600 hover:text-indigo-700"
-            }`}
-          >
-            Contact
-          </Link>
+          {[
+            { href: "/", label: "Home" },
+            { href: "/about", label: "About Us" },
+            { href: "/team", label: "Our Team" },
+            { href: "/services", label: "Our Services" },
+            { href: "/countries", label: "Countries" },
+            { href: "/testimonials", label: "Testimonials" },
+            { href: "/contact", label: "Contact" },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`transition duration-300 ${
+                isActive(href)
+                  ? "text-indigo-700 font-semibold"
+                  : "text-gray-600 hover:text-indigo-700"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
 
         {/* Mobile Menu Button */}
@@ -97,7 +62,12 @@ export default function Navigation() {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
           </svg>
         </button>
       </div>

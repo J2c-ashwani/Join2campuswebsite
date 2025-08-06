@@ -4,27 +4,29 @@ import { useState } from "react"
 import { countriesData } from "@/lib/data"
 import Link from "next/link"
 import CountryInfoModal from "./CountryInfoModal"
+import Image from "next/image"
 
 export default function CountriesSection() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
 
-  // Calculate totals
-  const totalUniversities = countriesData.reduce((sum, country) => {
-    const num = Number.parseInt(country.universities.split("+")[0])
-    return sum + num
-  }, 0)
+  // Safe number parsing (handles formats like "2,500+")
+  const parseNumber = (str: string) => {
+    const match = str.replace(/,/g, "").match(/\d+/) // remove commas, extract digits
+    return match ? Number(match[0]) : 0
+  }
 
-  const totalStudents = countriesData.reduce((sum, country) => {
-    const num = Number.parseInt(country.students.split("+")[0])
-    return sum + num
-  }, 0)
+  // Calculate totals
+  const totalUniversities = countriesData.reduce((sum, country) => sum + parseNumber(country.universities), 0)
+  const totalStudents = countriesData.reduce((sum, country) => sum + parseNumber(country.students), 0)
 
   return (
     <section id="countries" className="py-20 px-4 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
       <div className="container mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">16 Premium European Destinations</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            16 Premium European Destinations
+          </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8">
             {totalUniversities}+ Partner Universities across 16 European countries. Over{" "}
             {Math.floor(totalStudents / 100) * 100}+ students successfully placed across our comprehensive European
@@ -35,22 +37,10 @@ export default function CountriesSection() {
 
         {/* Enhanced Statistics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-indigo-100 text-center">
-            <div className="text-4xl font-bold text-indigo-600 mb-2">16</div>
-            <div className="text-gray-600 font-medium">European Countries</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-purple-100 text-center">
-            <div className="text-4xl font-bold text-purple-600 mb-2">{totalUniversities}+</div>
-            <div className="text-gray-600 font-medium">Partner Universities</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-green-100 text-center">
-            <div className="text-4xl font-bold text-green-600 mb-2">{Math.floor(totalStudents / 100) * 100}+</div>
-            <div className="text-gray-600 font-medium">Students Placed</div>
-          </div>
-          <div className="bg-white rounded-xl p-6 shadow-lg border border-orange-100 text-center">
-            <div className="text-4xl font-bold text-orange-600 mb-2">98%</div>
-            <div className="text-gray-600 font-medium">Visa Success Rate</div>
-          </div>
+          <StatCard number="16" label="European Countries" color="indigo" />
+          <StatCard number={`${totalUniversities}+`} label="Partner Universities" color="purple" />
+          <StatCard number={`${Math.floor(totalStudents / 100) * 100}+`} label="Students Placed" color="green" />
+          <StatCard number="98%" label="Visa Success Rate" color="orange" />
         </div>
 
         {/* Countries Grid */}
@@ -62,21 +52,31 @@ export default function CountriesSection() {
             >
               {/* Country Header */}
               <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4 text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 text-4xl opacity-20 transform rotate-12">{country.flag}</div>
+                <div className="absolute top-0 right-0 opacity-20 transform rotate-12">
+                  <Image
+                    src={country.flag || "/flags/placeholder.png"}
+                    alt={`${country.name} flag`}
+                    width={48}
+                    height={32}
+                    className="object-cover"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="relative z-10">
                   <div className="flex items-center mb-2">
-                    <span className="text-2xl mr-2">{country.flag}</span>
+                    <Image
+                      src={country.flag || "/flags/placeholder.png"}
+                      alt={`${country.name} flag`}
+                      width={24}
+                      height={16}
+                      className="mr-2 object-cover rounded-sm"
+                      loading="lazy"
+                    />
                     <h3 className="text-lg font-bold">{country.name}</h3>
                   </div>
                   <div className="grid grid-cols-2 gap-2 mt-3">
-                    <div className="text-center">
-                      <div className="text-sm font-bold">{country.universities}</div>
-                      <div className="text-xs text-indigo-200">Universities</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-sm font-bold">{country.students}</div>
-                      <div className="text-xs text-indigo-200">Students</div>
-                    </div>
+                    <SmallStat number={country.universities} label="Universities" />
+                    <SmallStat number={country.students} label="Students" />
                   </div>
                 </div>
               </div>
@@ -95,9 +95,10 @@ export default function CountriesSection() {
                   ))}
                 </div>
 
-                {/* Action Button - Updated to open modal */}
+                {/* Action Button */}
                 <button
                   onClick={() => setSelectedCountry(country.name)}
+                  aria-label={`Explore more about ${country.name}`}
                   className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-2 px-3 rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 font-semibold text-center block group-hover:shadow-lg text-sm"
                 >
                   Explore {country.name}
@@ -111,22 +112,10 @@ export default function CountriesSection() {
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white text-center mb-16">
           <h3 className="text-3xl md:text-4xl font-bold mb-6">Complete European Coverage</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-            <div>
-              <div className="text-2xl font-bold mb-2">Western Europe</div>
-              <div className="text-indigo-200 text-sm">France, Germany, Netherlands, Belgium, Austria</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold mb-2">Northern Europe</div>
-              <div className="text-indigo-200 text-sm">Ireland, Denmark, Sweden</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold mb-2">Southern Europe</div>
-              <div className="text-indigo-200 text-sm">Spain, Italy, Portugal, Malta, Cyprus</div>
-            </div>
-            <div>
-              <div className="text-2xl font-bold mb-2">Central Europe</div>
-              <div className="text-indigo-200 text-sm">Poland, Czech Republic, Hungary</div>
-            </div>
+            <RegionBlock title="Western Europe" countries="France, Germany, Netherlands, Belgium, Austria" />
+            <RegionBlock title="Northern Europe" countries="Ireland, Denmark, Sweden" />
+            <RegionBlock title="Southern Europe" countries="Spain, Italy, Portugal, Malta, Cyprus" />
+            <RegionBlock title="Central Europe" countries="Poland, Czech Republic, Hungary" />
           </div>
           <p className="text-xl mb-8 text-indigo-100 max-w-3xl mx-auto">
             From the tech hubs of Netherlands to the historic universities of Italy, we cover every major European
@@ -156,5 +145,33 @@ export default function CountriesSection() {
         onClose={() => setSelectedCountry(null)}
       />
     </section>
+  )
+}
+
+// Small reusable components
+function StatCard({ number, label, color }: { number: string; label: string; color: string }) {
+  return (
+    <div className={`bg-white rounded-xl p-6 shadow-lg border text-center border-${color}-100`}>
+      <div className={`text-4xl font-bold text-${color}-600 mb-2`}>{number}</div>
+      <div className="text-gray-600 font-medium">{label}</div>
+    </div>
+  )
+}
+
+function SmallStat({ number, label }: { number: string; label: string }) {
+  return (
+    <div className="text-center">
+      <div className="text-sm font-bold">{number}</div>
+      <div className="text-xs text-indigo-200">{label}</div>
+    </div>
+  )
+}
+
+function RegionBlock({ title, countries }: { title: string; countries: string }) {
+  return (
+    <div>
+      <div className="text-2xl font-bold mb-2">{title}</div>
+      <div className="text-indigo-200 text-sm">{countries}</div>
+    </div>
   )
 }

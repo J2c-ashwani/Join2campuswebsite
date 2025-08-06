@@ -1,7 +1,7 @@
 export const countriesData = [
   {
     name: "France",
-    flag: "🇫🇷",
+    flag: "/flags/fr.png",
     description:
       "Experience world-class education in the heart of Europe with affordable tuition and rich cultural heritage.",
     highlights: ["Quality Education", "Cultural Diversity", "Career Opportunities"],
@@ -10,7 +10,7 @@ export const countriesData = [
   },
   {
     name: "Germany",
-    flag: "🇩🇪",
+    flag: "/flags/de.png",
     description:
       "Study in Europe's economic powerhouse with excellent technical programs and strong industry connections.",
     highlights: ["Engineering Excellence", "Research Opportunities", "Industry Links"],
@@ -19,7 +19,7 @@ export const countriesData = [
   },
   {
     name: "Ireland",
-    flag: "🇮🇪",
+    flag: "/flags/ie.png",
     description: "English-speaking education hub with globally recognized degrees and vibrant student life.",
     highlights: ["English Medium", "Global Recognition", "Tech Hub"],
     universities: "15+ Partner Universities",
@@ -27,7 +27,7 @@ export const countriesData = [
   },
   {
     name: "Spain",
-    flag: "🇪🇸",
+    flag: "/flags/es.png",
     description:
       "Discover Mediterranean lifestyle while pursuing quality education in one of Europe's most welcoming countries.",
     highlights: ["Mediterranean Culture", "Affordable Living", "Historic Universities"],
@@ -36,7 +36,7 @@ export const countriesData = [
   },
   {
     name: "Cyprus",
-    flag: "🇨🇾",
+    flag: "/flags/cy.png",
     description:
       "Island nation offering European education with beautiful Mediterranean climate and modern facilities.",
     highlights: ["Island Life", "Modern Facilities", "EU Standards"],
@@ -45,7 +45,7 @@ export const countriesData = [
   },
   {
     name: "Malta",
-    flag: "🇲🇹",
+    flag: "/flags/mt.png",
     description:
       "Small island nation with big opportunities - English-speaking education in the heart of the Mediterranean.",
     highlights: ["English Speaking", "Small Class Sizes", "EU Member"],
@@ -54,7 +54,7 @@ export const countriesData = [
   },
   {
     name: "Netherlands",
-    flag: "🇳🇱",
+    flag: "/flags/nl.png",
     description:
       "Progressive education system with innovative programs taught in English in one of Europe's most international countries.",
     highlights: ["English Programs", "Innovation Hub", "Multicultural Environment"],
@@ -63,7 +63,7 @@ export const countriesData = [
   },
   {
     name: "Italy",
-    flag: "🇮🇹",
+    flag: "/flags/it.png",
     description:
       "Study in the birthplace of Renaissance with world-renowned universities, rich history, and exceptional cuisine.",
     highlights: ["Historic Universities", "Art & Culture", "Fashion & Design"],
@@ -72,7 +72,7 @@ export const countriesData = [
   },
   {
     name: "Poland",
-    flag: "🇵🇱",
+    flag: "/flags/pl.png",
     description:
       "Emerging education destination with high-quality programs, affordable costs, and growing international recognition.",
     highlights: ["Affordable Education", "Growing Recognition", "Central Location"],
@@ -81,7 +81,7 @@ export const countriesData = [
   },
   {
     name: "Portugal",
-    flag: "🇵🇹",
+    flag: "/flags/pt.png",
     description:
       "Beautiful coastal country offering quality education with warm climate, friendly culture, and affordable living.",
     highlights: ["Coastal Beauty", "Affordable Living", "Friendly Culture"],
@@ -90,7 +90,7 @@ export const countriesData = [
   },
   {
     name: "Czech Republic",
-    flag: "🇨🇿",
+    flag: "/flags/cz.png",
     description:
       "Central European gem with prestigious universities, stunning architecture, and excellent value for education.",
     highlights: ["Historic Architecture", "Quality Education", "Central Europe"],
@@ -99,7 +99,7 @@ export const countriesData = [
   },
   {
     name: "Austria",
-    flag: "🇦🇹",
+    flag: "/flags/at.png",
     description:
       "Alpine nation known for music, culture, and high-quality education with strong emphasis on research and innovation.",
     highlights: ["Music & Culture", "Research Excellence", "Alpine Beauty"],
@@ -108,7 +108,7 @@ export const countriesData = [
   },
   {
     name: "Belgium",
-    flag: "🇧🇪",
+    flag: "/flags/be.png",
     description:
       "Heart of Europe offering multilingual education, EU institutions proximity, and excellent chocolate and waffles.",
     highlights: ["EU Hub", "Multilingual", "International Exposure"],
@@ -117,7 +117,7 @@ export const countriesData = [
   },
   {
     name: "Hungary",
-    flag: "🇭🇺",
+    flag: "/flags/hu.png",
     description:
       "Central European country with strong medical and engineering programs, thermal baths, and rich cultural heritage.",
     highlights: ["Medical Excellence", "Thermal Baths", "Cultural Heritage"],
@@ -126,7 +126,7 @@ export const countriesData = [
   },
   {
     name: "Denmark",
-    flag: "🇩🇰",
+    flag: "/flags/dk.png",
     description:
       "Scandinavian country known for happiness, design, and innovative education system with strong work-life balance.",
     highlights: ["Design Innovation", "Work-Life Balance", "Sustainable Living"],
@@ -135,7 +135,7 @@ export const countriesData = [
   },
   {
     name: "Sweden",
-    flag: "🇸🇪",
+    flag: "/flags/se.png",
     description:
       "Nordic country offering cutting-edge technology programs, sustainability focus, and high quality of life.",
     highlights: ["Technology Hub", "Sustainability", "High Quality Life"],
@@ -147,7 +147,7 @@ export const countriesData = [
 export const globalNetworkData = [
   {
     country: "India",
-    flag: "🇮🇳",
+    flag: "/flags/in.png",
     consultants: "150+",
     students: "2,500+",
     cities: ["Mumbai", "Delhi", "Bangalore", "Chennai", "Pune", "Ahmedabad", "Hyderabad", "Kolkata"],
@@ -155,7 +155,7 @@ export const globalNetworkData = [
   },
   {
     country: "Nepal",
-    flag: "🇳🇵",
+    flag: "/flags/np.png",
     consultants: "45+",
     students: "800+",
     cities: ["Kathmandu", "Pokhara", "Lalitpur", "Bharatpur"],
@@ -163,7 +163,7 @@ export const globalNetworkData = [
   },
   {
     country: "Sri Lanka",
-    flag: "🇱🇰",
+    flag: "/flags/lk.png",
     consultants: "35+",
     students: "600+",
     cities: ["Colombo", "Kandy", "Galle", "Jaffna"],
@@ -171,7 +171,7 @@ export const globalNetworkData = [
   },
   {
     country: "Ghana",
-    flag: "🇬🇭",
+    flag: "/flags/gh.png",
     consultants: "25+",
     students: "400+",
     cities: ["Accra", "Kumasi", "Tamale", "Cape Coast"],
@@ -179,7 +179,7 @@ export const globalNetworkData = [
   },
   {
     country: "Philippines",
-    flag: "🇵🇭",
+    flag: "/flags/ph.png",
     consultants: "30+",
     students: "500+",
     cities: ["Manila", "Cebu", "Davao", "Quezon City"],
@@ -193,28 +193,32 @@ export const testimonialsData = [
       "Working with Join2Campus has been an exceptional experience. The professionalism, dedication, helpful nature, kindness and deep understanding of the process for studying abroad: especially in Europe - have truly set them apart from others. I would like to especially highlight the incredible support from Chetan and Ashwani. Their guidance was always timely, clear, and very reassuring. From the very beginning, they were approachable, knowledgeable, and committed to help us and our students achieve success. Their responsiveness and attention to detail made every step of the journey smooth and stress-free. Thanks to their consistent efforts and personalised care, I feel confident recommending Join2Campus to anyone looking for trustworthy and effective support for their educational aspirations abroad. It has been a pleasure collaborating with them, and I look forward to continuing this strong partnership in the future.",
     name: "Aashma Thapa",
     title: "Manager/Documentation Officer - Nepal",
-    country: "🇳🇵 Nepal",
+    country: "Nepal",
+    flag: "/flags/np.png",
   },
   {
     quote:
       "As an education consultant, I've had the privilege of collaborating with Join2Campus, and the experience has been outstanding. Their team is professional, transparent, and truly dedicated to helping students achieve their dream of studying abroad. What sets Join2Campus apart is their strong network of partner universities in Europe and their commitment to providing end-to-end support — from counseling and application assistance to visa guidance. Thanks to their reliable services, I've been able to confidently guide my students toward excellent academic opportunities. I highly recommend Join2Campus as a trusted partner in international education.",
     name: "Mr. Ravi",
     title: "Senior Education Consultant - Ahmedabad",
-    country: "🇮🇳 India",
+    country: "India",
+    flag: "/flags/in.png",
   },
   {
     quote:
       "Join2Campus has revolutionized how we approach European education for our students. Their comprehensive support system and extensive university partnerships have enabled us to achieve remarkable success rates. The team's expertise in visa processes and their understanding of different European education systems is unmatched.",
     name: "Sarah Johnson",
     title: "Director, Global Education Services",
-    country: "🇬🇭 Ghana",
+    country: "Ghana",
+    flag: "/flags/gh.png",
   },
   {
     quote:
       "The partnership with Join2Campus has been transformative for our consultancy. Their professional approach, extensive network, and commitment to student success has helped us expand our European offerings significantly. We've seen a 300% increase in successful placements since partnering with them.",
     name: "Maria Santos",
     title: "CEO, EduPath Philippines",
-    country: "🇵🇭 Philippines",
+    country: "Philippines",
+    flag: "/flags/ph.png",
   },
 ]
 

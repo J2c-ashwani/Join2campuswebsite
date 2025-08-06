@@ -7,28 +7,24 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ["googleusercontent.com", "placehold.co", "blob.v0.dev"],
     remotePatterns: [
       {
-        protocol: "http",
+        protocol: "https",
         hostname: "googleusercontent.com",
-        port: "",
         pathname: "/file_content/**",
       },
       {
         protocol: "https",
         hostname: "placehold.co",
-        port: "",
         pathname: "/**",
       },
       {
         protocol: "https",
         hostname: "blob.v0.dev",
-        port: "",
         pathname: "/**",
       },
     ],
-    unoptimized: false,
+    unoptimized: false, // keep Next.js image optimizations enabled
   },
   async headers() {
     return [

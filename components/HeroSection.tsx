@@ -48,7 +48,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto text-center relative z-10">
-        {/* Main Headline with SEO keywords */}
+        {/* Main Headline */}
         <div className="mb-8">
           <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-6 bg-gradient-to-r from-white via-yellow-100 to-blue-100 bg-clip-text text-transparent drop-shadow-2xl">
             Join2Campus - Europe's Leading
@@ -119,28 +119,34 @@ export default function HeroSection() {
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 max-w-6xl mx-auto">
             {[
-              { flag: "🇫🇷", name: "France" },
-              { flag: "🇩🇪", name: "Germany" },
-              { flag: "🇮🇪", name: "Ireland" },
-              { flag: "🇪🇸", name: "Spain" },
-              { flag: "🇳🇱", name: "Netherlands" },
-              { flag: "🇮🇹", name: "Italy" },
-              { flag: "🇵🇱", name: "Poland" },
-              { flag: "🇵🇹", name: "Portugal" },
-              { flag: "🇨🇿", name: "Czech Rep." },
-              { flag: "🇦🇹", name: "Austria" },
-              { flag: "🇧🇪", name: "Belgium" },
-              { flag: "🇭🇺", name: "Hungary" },
-              { flag: "🇩🇰", name: "Denmark" },
-              { flag: "🇸🇪", name: "Sweden" },
-              { flag: "🇨🇾", name: "Cyprus" },
-              { flag: "🇲🇹", name: "Malta" },
+              { flag: "/flags/fr.png", name: "France" },
+              { flag: "/flags/de.png", name: "Germany" },
+              { flag: "/flags/ie.png", name: "Ireland" },
+              { flag: "/flags/es.png", name: "Spain" },
+              { flag: "/flags/nl.png", name: "Netherlands" },
+              { flag: "/flags/it.png", name: "Italy" },
+              { flag: "/flags/pl.png", name: "Poland" },
+              { flag: "/flags/pt.png", name: "Portugal" },
+              { flag: "/flags/cz.png", name: "Czech Rep." },
+              { flag: "/flags/at.png", name: "Austria" },
+              { flag: "/flags/be.png", name: "Belgium" },
+              { flag: "/flags/hu.png", name: "Hungary" },
+              { flag: "/flags/dk.png", name: "Denmark" },
+              { flag: "/flags/se.png", name: "Sweden" },
+              { flag: "/flags/cy.png", name: "Cyprus" },
+              { flag: "/flags/mt.png", name: "Malta" },
             ].map((country, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center opacity-90 hover:opacity-100 transition-all duration-300 bg-white/20 backdrop-blur-md rounded-lg p-3 hover:bg-white/25 hover:scale-105 border border-white/30"
               >
-                <span className="text-2xl mb-1">{country.flag}</span>
+                <Image
+                  src={country.flag}
+                  alt={country.name}
+                  width={32}
+                  height={24}
+                  className="rounded mb-2"
+                />
                 <span className="text-xs text-white font-medium">{country.name}</span>
               </div>
             ))}

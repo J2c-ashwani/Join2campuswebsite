@@ -1,8 +1,7 @@
 "use client"
 
 import { useState } from "react"
-// Remove the import
-// import { MapPin, Users, GraduationCap, TrendingUp } from 'lucide-react'
+import Image from "next/image"
 
 export default function InteractiveEuropeMap() {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null)
@@ -11,7 +10,7 @@ export default function InteractiveEuropeMap() {
     {
       id: "france",
       name: "France",
-      flag: "🇫🇷",
+      flag: "/flags/fr.png",
       universities: "25+",
       students: "500+",
       consultants: "45+",
@@ -24,7 +23,7 @@ export default function InteractiveEuropeMap() {
     {
       id: "germany",
       name: "Germany",
-      flag: "🇩🇪",
+      flag: "/flags/de.png",
       universities: "20+",
       students: "400+",
       consultants: "38+",
@@ -37,7 +36,7 @@ export default function InteractiveEuropeMap() {
     {
       id: "ireland",
       name: "Ireland",
-      flag: "🇮🇪",
+      flag: "/flags/ie.png",
       universities: "15+",
       students: "300+",
       consultants: "25+",
@@ -49,7 +48,7 @@ export default function InteractiveEuropeMap() {
     {
       id: "spain",
       name: "Spain",
-      flag: "🇪🇸",
+      flag: "/flags/es.png",
       universities: "18+",
       students: "250+",
       consultants: "30+",
@@ -62,7 +61,7 @@ export default function InteractiveEuropeMap() {
     {
       id: "netherlands",
       name: "Netherlands",
-      flag: "🇳🇱",
+      flag: "/flags/nl.png",
       universities: "22+",
       students: "350+",
       consultants: "32+",
@@ -74,7 +73,7 @@ export default function InteractiveEuropeMap() {
     {
       id: "italy",
       name: "Italy",
-      flag: "🇮🇹",
+      flag: "/flags/it.png",
       universities: "16+",
       students: "280+",
       consultants: "28+",
@@ -106,7 +105,7 @@ export default function InteractiveEuropeMap() {
               {/* SVG Map Container */}
               <div className="relative bg-gradient-to-br from-blue-100 to-indigo-200 rounded-xl p-6 min-h-96">
                 <svg viewBox="0 0 100 80" className="w-full h-full">
-                  {/* Europe outline (simplified) */}
+                  {/* Europe outline */}
                   <path
                     d="M20,20 L80,20 L85,30 L80,40 L85,50 L80,60 L70,65 L60,70 L50,65 L40,70 L30,65 L25,55 L20,45 L15,35 Z"
                     fill="rgba(59, 130, 246, 0.1)"
@@ -127,18 +126,31 @@ export default function InteractiveEuropeMap() {
                         className="cursor-pointer hover:r-4 transition-all duration-300"
                         onClick={() => setSelectedCountry(country.id)}
                       />
-                      <text
-                        x={country.position.x}
-                        y={country.position.y - 5}
-                        textAnchor="middle"
-                        className="text-xs font-semibold fill-gray-700 cursor-pointer"
-                        onClick={() => setSelectedCountry(country.id)}
-                      >
-                        {country.flag}
-                      </text>
                     </g>
                   ))}
                 </svg>
+
+                {/* Country flag tooltips */}
+                {countries.map((country) => (
+                  <div
+                    key={country.id + "-flag"}
+                    className="absolute"
+                    style={{
+                      left: `${country.position.x}%`,
+                      top: `${country.position.y - 5}%`,
+                      transform: "translate(-50%, -100%)",
+                    }}
+                    onClick={() => setSelectedCountry(country.id)}
+                  >
+                    <Image
+                      src={country.flag}
+                      alt={`${country.name} flag`}
+                      width={20}
+                      height={14}
+                      className="rounded border border-gray-300 shadow cursor-pointer"
+                    />
+                  </div>
+                ))}
 
                 {/* Legend */}
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 text-xs">
@@ -159,14 +171,14 @@ export default function InteractiveEuropeMap() {
                   <button
                     key={country.id}
                     onClick={() => setSelectedCountry(country.id)}
-                    className={`p-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+                    className={`p-2 rounded-lg text-sm font-medium flex items-center space-x-2 transition-all duration-300 ${
                       selectedCountry === country.id
                         ? "bg-amber-500 text-white shadow-lg"
                         : "bg-white text-gray-700 hover:bg-blue-50 border border-gray-200"
                     }`}
                   >
-                    <span className="mr-1">{country.flag}</span>
-                    {country.name}
+                    <Image src={country.flag} alt={country.name} width={20} height={14} className="rounded shadow" />
+                    <span>{country.name}</span>
                   </button>
                 ))}
               </div>
@@ -178,7 +190,13 @@ export default function InteractiveEuropeMap() {
             {selectedCountryData ? (
               <div className="bg-white rounded-2xl shadow-2xl p-8 border border-gray-200">
                 <div className="flex items-center mb-6">
-                  <span className="text-4xl mr-4">{selectedCountryData.flag}</span>
+                  <Image
+                    src={selectedCountryData.flag}
+                    alt={`${selectedCountryData.name} flag`}
+                    width={48}
+                    height={32}
+                    className="mr-4 rounded shadow"
+                  />
                   <div>
                     <h3 className="text-3xl font-bold text-gray-800">{selectedCountryData.name}</h3>
                     <p className="text-gray-600">Capital: {selectedCountryData.capital}</p>

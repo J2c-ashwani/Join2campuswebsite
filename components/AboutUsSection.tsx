@@ -58,7 +58,7 @@ export default function AboutUsSection() {
         {/* Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
           <StatCard number="100+" label="Partner Institutions" color="indigo" />
-          <StatCard number="3,500+" label="ECTS‑Aligned Programs" color="purple" />
+          <StatCard number="3,500+" label="ECTS-Aligned Programs" color="purple" />
           <StatCard number="6,200+" label="Students Annually" color="green" />
           <StatCard number="16" label="European Destinations" color="orange" />
         </div>
@@ -69,10 +69,10 @@ export default function AboutUsSection() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Target className="h-5 w-5 text-indigo-600" />
-                <CardTitle className="text-lg text-gray-900">Outcome‑Aligned Guidance</CardTitle>
+                <CardTitle className="text-lg text-gray-900">Outcome-Aligned Guidance</CardTitle>
               </div>
               <CardDescription className="text-gray-600">
-                Shortlists that balance eligibility, budget, language needs, and post‑study goals.
+                Shortlists that balance eligibility, budget, language needs, and post-study goals.
               </CardDescription>
             </CardHeader>
             <CardContent className="text-gray-700">
@@ -106,7 +106,7 @@ export default function AboutUsSection() {
             {[
               {
                 icon: Compass,
-                title: "Student‑First Integrity",
+                title: "Student-First Integrity",
                 desc: "Advice that prioritizes fit, transparency, and realistic pathways—no overpromises.",
                 color: "text-indigo-600",
               },
@@ -137,7 +137,7 @@ export default function AboutUsSection() {
         </div>
 
         {/* Regional coverage band */}
-        <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white text-center mb-16">
+        <div id="countries" className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white text-center mb-16">
           <h3 className="text-3xl md:text-4xl font-bold mb-6">European Coverage</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
             {[
@@ -151,15 +151,15 @@ export default function AboutUsSection() {
               },
               {
                 country: "Ireland",
-                desc: "STEM & business strengths • Post‑study options",
+                desc: "STEM & business strengths • Post-study options",
               },
               {
                 country: "Malta",
-                desc: "English‑medium programs • Affordability • Multiple intakes",
+                desc: "English-medium programs • Affordability • Multiple intakes",
               },
               {
                 country: "Cyprus",
-                desc: "Scholarships • D‑type visa guidance • English programs",
+                desc: "Scholarships • D-type visa guidance • English programs",
               },
               {
                 country: "More EU",
@@ -182,13 +182,13 @@ export default function AboutUsSection() {
           {[
             {
               icon: BookOpen,
-              title: "Evidence‑Based Counseling",
+              title: "Evidence-Based Counseling",
               desc: "Intake calendars, eligibility matrices, and document checklists—no guesswork.",
             },
             {
               icon: HeartHandshake,
               title: "Student Wellbeing",
-              desc: "Pre‑departure guidance on accommodation, insurance, and arrival checklists.",
+              desc: "Pre-departure guidance on accommodation, insurance, and arrival checklists.",
             },
             {
               icon: Sparkles,
@@ -216,16 +216,16 @@ export default function AboutUsSection() {
               <CardTitle className="text-lg text-gray-900">Accreditations & Compliance</CardTitle>
             </div>
             <CardDescription className="text-gray-600">
-              Built‑in safeguards to keep applications accurate, timely, and compliant.
+              Built-in safeguards to keep applications accurate, timely, and compliant.
             </CardDescription>
           </CardHeader>
           <CardContent className="text-gray-700">
             <ul className="grid gap-3 sm:grid-cols-2">
               {[
-                "GDPR‑aligned handling of student data",
-                "ECTS and Bologna‑process alignment",
+                "GDPR-aligned handling of student data",
+                "ECTS and Bologna-process alignment",
                 "APS readiness where applicable (e.g., Germany)",
-                "Embassy‑ready document packaging and checklists",
+                "Embassy-ready document packaging and checklists",
                 "Transparent fee schedules and reconciliations",
                 "Escalation paths and SLAs across each stage",
               ].map((item) => (
@@ -242,15 +242,16 @@ export default function AboutUsSection() {
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl p-8 md:p-12 text-white text-center">
           <h3 className="text-3xl md:text-4xl font-bold mb-3">Ready to plan your European admission?</h3>
           <p className="text-indigo-100 max-w-3xl mx-auto mb-8">
-            Let’s shortlist programs and intakes aligned to your budget, language preferences, and post‑study goals.
+            Let’s shortlist programs and intakes aligned to your budget, language preferences, and post-study goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact" className="inline-block">
+            <Link href="/contact" className="inline-block">
               <Button className="bg-white text-indigo-600 hover:bg-indigo-50 rounded-full px-6">
                 Get Free Consultation
               </Button>
             </Link>
-            <Link href="/#countries" className="inline-block">
+            {/* The corrected link to the countries page */}
+            <Link href="/countries" className="inline-block">
               <Button className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-indigo-600 rounded-full px-6">
                 Explore Countries
               </Button>

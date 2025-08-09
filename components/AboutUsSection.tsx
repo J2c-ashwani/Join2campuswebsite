@@ -57,10 +57,10 @@ export default function AboutUsSection() {
 
         {/* Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          <StatCard number="150+" label="Partner Institutions" color="indigo" />
+          <StatCard number="100+" label="Partner Institutions" color="indigo" />
           <StatCard number="3,500+" label="ECTS‑Aligned Programs" color="purple" />
-          <StatCard number="2,000+" label="Applications / Year" color="green" />
-          <StatCard number="10+" label="European Destinations" color="orange" />
+          <StatCard number="6,200+" label="Students Annually" color="green" />
+          <StatCard number="16" label="European Destinations" color="orange" />
         </div>
 
         {/* Pillars */}

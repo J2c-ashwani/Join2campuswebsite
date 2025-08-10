@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+
 interface CountryInfo {
   name: string
   flag: string

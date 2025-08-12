@@ -1,7 +1,5 @@
 "use client"
 
-import Link from "next/link"
-
 interface CountryInfo {
   name: string
   flag: string
@@ -35,7 +33,7 @@ interface CountryInfo {
 const countryInfo: { [key: string]: CountryInfo } = {
   france: {
     name: "France",
-    flag: "/flags/fr.png",
+    flag: "🇫🇷",
     capital: "Paris",
     language: ["French", "English (international programs)"],
     currency: "Euro (€)",
@@ -85,7 +83,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   germany: {
     name: "Germany",
-    flag: "/flags/de.png",
+    flag: "🇩🇪",
     capital: "Berlin",
     language: ["German", "English (international programs)"],
     currency: "Euro (€)",
@@ -135,7 +133,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   ireland: {
     name: "Ireland",
-    flag: "/flags/ie.png",
+    flag: "🇮🇪",
     capital: "Dublin",
     language: ["English"],
     currency: "Euro (€)",
@@ -185,7 +183,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   spain: {
     name: "Spain",
-    flag: "/flags/es.png",
+    flag: "🇪🇸",
     capital: "Madrid",
     language: ["Spanish", "English (international programs)"],
     currency: "Euro (€)",
@@ -241,7 +239,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   cyprus: {
     name: "Cyprus",
-    flag: "/flags/cy.png",
+    flag: "🇨🇾",
     capital: "Nicosia",
     language: ["Greek", "Turkish", "English"],
     currency: "Euro (€)",
@@ -297,7 +295,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   malta: {
     name: "Malta",
-    flag: "/flags/mt.png",
+    flag: "🇲🇹",
     capital: "Valletta",
     language: ["Maltese", "English"],
     currency: "Euro (€)",
@@ -348,7 +346,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   netherlands: {
     name: "Netherlands",
-    flag: "/flags/nl.png",
+    flag: "🇳🇱",
     capital: "Amsterdam",
     language: ["Dutch", "English (widely used in international programs)"],
     currency: "Euro (€)",
@@ -400,7 +398,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   italy: {
     name: "Italy",
-    flag: "/flags/it.png",
+    flag: "🇮🇹",
     capital: "Rome",
     language: ["Italian", "English (international programs)"],
     currency: "Euro (€)",
@@ -452,7 +450,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   poland: {
     name: "Poland",
-    flag: "/flags/pl.png",
+    flag: "🇵🇱",
     capital: "Warsaw",
     language: ["Polish", "English (international programs)"],
     currency: "Polish Złoty (PLN)",
@@ -504,7 +502,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   portugal: {
     name: "Portugal",
-    flag: "/flags/pt.png",
+    flag: "🇵🇹",
     capital: "Lisbon",
     language: ["Portuguese", "English (international programs)"],
     currency: "Euro (€)",
@@ -556,7 +554,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   "czech republic": {
     name: "Czech Republic",
-    flag: "/flags/cz.png",
+    flag: "🇨🇿",
     capital: "Prague",
     language: ["Czech", "English (international programs)"],
     currency: "Czech Koruna (CZK)",
@@ -608,7 +606,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   austria: {
     name: "Austria",
-    flag: "/flags/at.png",
+    flag: "🇦🇹",
     capital: "Vienna",
     language: ["German", "English (international programs)"],
     currency: "Euro (€)",
@@ -665,7 +663,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   belgium: {
     name: "Belgium",
-    flag: "/flags/be.png",
+    flag: "🇧🇪",
     capital: "Brussels",
     language: ["Dutch", "French", "German", "English (international programs)"],
     currency: "Euro (€)",
@@ -717,7 +715,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   hungary: {
     name: "Hungary",
-    flag: "/flags/hu.png",
+    flag: "🇭🇺",
     capital: "Budapest",
     language: ["Hungarian", "English (international programs)"],
     currency: "Hungarian Forint (HUF)",
@@ -769,7 +767,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   denmark: {
     name: "Denmark",
-    flag: "/flags/dk.png",
+    flag: "🇩🇰",
     capital: "Copenhagen",
     language: ["Danish", "English (widely spoken)"],
     currency: "Danish Krone (DKK)",
@@ -821,7 +819,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   sweden: {
     name: "Sweden",
-    flag: "/flags/se.png",
+    flag: "🇸🇪",
     capital: "Stockholm",
     language: ["Swedish", "English (widely spoken)"],
     currency: "Swedish Krona (SEK)",
@@ -892,12 +890,8 @@ export default function CountryInfoModal({ country, isOpen, onClose }: CountryIn
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-t-2xl">
           <div className="flex justify-between items-start">
             <div className="flex items-center">
-<img
-  src={info.flag}
-  alt={`${info.name} flag`}
-  className="w-10 h-7 mr-4 rounded shadow object-cover inline-block"
-  style={{ verticalAlign: "middle" }}
-/>              <div>
+              <span className="text-4xl mr-4">{info.flag}</span>
+              <div>
                 <h2 className="text-3xl font-bold">Study in {info.name}</h2>
                 <p className="text-indigo-100">
                   Capital: {info.capital} | Currency: {info.currency}
@@ -1065,13 +1059,19 @@ export default function CountryInfoModal({ country, isOpen, onClose }: CountryIn
             <p className="text-indigo-100 mb-4">Get personalized guidance from our education experts</p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <button
-                onClick={onClose}
+                onClick={() => {
+                  onClose()
+                  window.location.href = "/contact"
+                }}
                 className="bg-white text-indigo-600 px-6 py-2 rounded-full font-semibold hover:bg-indigo-50 transition-colors"
               >
                 Get Free Consultation
               </button>
               <button
-                onClick={onClose}
+                onClick={() => {
+                  onClose()
+                  window.location.href = "/student-profile"
+                }}
                 className="border-2 border-white text-white px-6 py-2 rounded-full font-semibold hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 Submit Your Profile

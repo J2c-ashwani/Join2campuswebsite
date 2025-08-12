@@ -2,8 +2,15 @@
 
 import { globalNetworkData } from "@/lib/data"
 import Image from "next/image"
+import { useRouter } from "next/navigation"
 
 export default function GlobalNetworkSection() {
+  const router = useRouter()
+
+  const handleScrollToForm = () => {
+    router.push("/contact#contact-form")
+  }
+
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-gray-50 to-indigo-50">
       <div className="container mx-auto">
@@ -78,7 +85,10 @@ export default function GlobalNetworkSection() {
             Partner with Join2Campus and gain access to our extensive consultant network across 5 countries. Increase
             your international student enrollment with our proven recruitment system.
           </p>
-          <button className="bg-white text-indigo-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-indigo-50 transition-colors duration-300 shadow-lg hover:shadow-xl">
+          <button
+            onClick={handleScrollToForm}
+            className="bg-white text-indigo-600 px-10 py-4 rounded-full font-bold text-lg hover:bg-indigo-50 transition-colors duration-300 shadow-lg hover:shadow-xl"
+          >
             Partner With Our Network
           </button>
         </div>

@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 interface CountryInfo {
   name: string
   flag: string
@@ -33,7 +35,7 @@ interface CountryInfo {
 const countryInfo: { [key: string]: CountryInfo } = {
   france: {
     name: "France",
-    flag: "🇫🇷",
+    flag: "/flags/fr.png",
     capital: "Paris",
     language: ["French", "English (international programs)"],
     currency: "Euro (€)",
@@ -83,7 +85,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   germany: {
     name: "Germany",
-    flag: "🇩🇪",
+    flag: "/flags/de.png",
     capital: "Berlin",
     language: ["German", "English (international programs)"],
     currency: "Euro (€)",
@@ -133,7 +135,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   ireland: {
     name: "Ireland",
-    flag: "🇮🇪",
+    flag: "/flags/ie.png",
     capital: "Dublin",
     language: ["English"],
     currency: "Euro (€)",
@@ -183,7 +185,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   spain: {
     name: "Spain",
-    flag: "🇪🇸",
+    flag: "/flags/es.png",
     capital: "Madrid",
     language: ["Spanish", "English (international programs)"],
     currency: "Euro (€)",
@@ -239,7 +241,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   cyprus: {
     name: "Cyprus",
-    flag: "🇨🇾",
+    flag: "/flags/cy.png",
     capital: "Nicosia",
     language: ["Greek", "Turkish", "English"],
     currency: "Euro (€)",
@@ -295,7 +297,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   malta: {
     name: "Malta",
-    flag: "🇲🇹",
+    flag: "/flags/mt.png",
     capital: "Valletta",
     language: ["Maltese", "English"],
     currency: "Euro (€)",
@@ -346,7 +348,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   netherlands: {
     name: "Netherlands",
-    flag: "🇳🇱",
+    flag: "/flags/nl.png",
     capital: "Amsterdam",
     language: ["Dutch", "English (widely used in international programs)"],
     currency: "Euro (€)",
@@ -398,7 +400,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   italy: {
     name: "Italy",
-    flag: "🇮🇹",
+    flag: "/flags/it.png",
     capital: "Rome",
     language: ["Italian", "English (international programs)"],
     currency: "Euro (€)",
@@ -450,7 +452,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   poland: {
     name: "Poland",
-    flag: "🇵🇱",
+    flag: "/flags/pl.png",
     capital: "Warsaw",
     language: ["Polish", "English (international programs)"],
     currency: "Polish Złoty (PLN)",
@@ -502,7 +504,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   portugal: {
     name: "Portugal",
-    flag: "🇵🇹",
+    flag: "/flags/pt.png",
     capital: "Lisbon",
     language: ["Portuguese", "English (international programs)"],
     currency: "Euro (€)",
@@ -554,7 +556,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   "czech republic": {
     name: "Czech Republic",
-    flag: "🇨🇿",
+    flag: "/flags/cz.png",
     capital: "Prague",
     language: ["Czech", "English (international programs)"],
     currency: "Czech Koruna (CZK)",
@@ -606,7 +608,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   austria: {
     name: "Austria",
-    flag: "🇦🇹",
+    flag: "/flags/at.png",
     capital: "Vienna",
     language: ["German", "English (international programs)"],
     currency: "Euro (€)",
@@ -663,7 +665,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   belgium: {
     name: "Belgium",
-    flag: "🇧🇪",
+    flag: "/flags/be.png",
     capital: "Brussels",
     language: ["Dutch", "French", "German", "English (international programs)"],
     currency: "Euro (€)",
@@ -715,7 +717,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   hungary: {
     name: "Hungary",
-    flag: "🇭🇺",
+    flag: "/flags/hu.png",
     capital: "Budapest",
     language: ["Hungarian", "English (international programs)"],
     currency: "Hungarian Forint (HUF)",
@@ -767,7 +769,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   denmark: {
     name: "Denmark",
-    flag: "🇩🇰",
+    flag: "/flags/dk.png",
     capital: "Copenhagen",
     language: ["Danish", "English (widely spoken)"],
     currency: "Danish Krone (DKK)",
@@ -819,7 +821,7 @@ const countryInfo: { [key: string]: CountryInfo } = {
   },
   sweden: {
     name: "Sweden",
-    flag: "🇸🇪",
+    flag: "/flags/se.png",
     capital: "Stockholm",
     language: ["Swedish", "English (widely spoken)"],
     currency: "Swedish Krona (SEK)",
@@ -890,7 +892,16 @@ export default function CountryInfoModal({ country, isOpen, onClose }: CountryIn
         <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-6 rounded-t-2xl">
           <div className="flex justify-between items-start">
             <div className="flex items-center">
-              <span className="text-4xl mr-4">{info.flag}</span>
+              {/* Updated flag display with proper sizing */}
+              <div className="relative w-16 h-12 mr-4 rounded-lg overflow-hidden shadow-lg border-2 border-white/30">
+                <Image
+                  src={info.flag || "/placeholder.svg"}
+                  alt={`${info.name} Flag`}
+                  fill
+                  className="object-cover"
+                  sizes="64px"
+                />
+              </div>
               <div>
                 <h2 className="text-3xl font-bold">Study in {info.name}</h2>
                 <p className="text-indigo-100">

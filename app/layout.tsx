@@ -15,6 +15,18 @@ export const metadata: Metadata = {
   keywords:
     "study abroad, European education, France, Germany, Ireland, Malta, Cyprus, education consultant",
   generator: "v0.dev",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/favicon.png", sizes: "48x48", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    other: [
+      { rel: "android-chrome", url: "/android-chrome-512x512.png", sizes: "512x512" },
+    ],
+  },
 }
 
 export default function RootLayout({
@@ -24,12 +36,24 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-gray-50 font-sans text-gray-800`}
-        style={{ margin: 0, padding: 0 }}
-      >
+      <head>
+        {/* Organization Schema for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Join2Campus",
+              "url": "https://www.join2campus.com",
+              "logo": "https://www.join2campus.com/loggo.png",
+            }),
+          }}
+        />
+      </head>
+      <body className={`${inter.className} bg-gray-50 font-sans text-gray-800`}>
         <Navigation />
-        <main style={{ margin: 0, padding: 0 }}>{children}</main>
+        <main className="min-h-[70vh]">{children}</main>
         <Footer />
         <WhatsAppChat />
       </body>

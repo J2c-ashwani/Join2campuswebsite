@@ -46,7 +46,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Join2Campus",
               "url": "https://www.join2campus.com",
-              "logo": "https://www.join2campus.com/loggo.png",
+              "logo": "https://www.join2campus.com/logo.png",
             }),
           }}
         />

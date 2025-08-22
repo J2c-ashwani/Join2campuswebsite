@@ -31,7 +31,7 @@ export default function Navigation() {
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
           <Image
-            src="/loggo.png"
+            src="/logo.png"
             alt="Join2Campus Logo"
             width={40}
             height={40}

@@ -47,6 +47,29 @@ export default function RootLayout({
               "name": "Join2Campus",
               "url": "https://www.join2campus.com",
               "logo": "https://www.join2campus.com/logo.png",
+              "sameAs": [
+                "https://www.linkedin.com/company/join2campus/?viewAsMember=true",
+                "https://www.instagram.com/join2campus_studyabroad?igsh=MWIweThkZHN5eGJ0Mw%3D%3D&utm_source=qr",
+                "https://www.facebook.com/share/1SBXJUUMMx/"
+              ]
+            }),
+          }}
+        />
+
+        {/* WebSite Schema for Google */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "url": "https://www.join2campus.com",
+              "name": "Join2Campus",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.join2campus.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
             }),
           }}
         />

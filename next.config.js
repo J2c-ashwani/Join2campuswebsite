@@ -39,6 +39,36 @@ const nextConfig = {
       },
     ];
   },
+  async redirects() {
+    return [
+      // Redirect non-www to www (HTTPS)
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "join2campus.com" }],
+        destination: "https://www.join2campus.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.join2campus.com" }],
+        destination: "https://www.join2campus.com/:path*",
+        permanent: true,
+      },
+      // Redirect HTTP (handled by Vercel automatically, but added for safety)
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "http://www.join2campus.com" }],
+        destination: "https://www.join2campus.com/:path*",
+        permanent: true,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "http://join2campus.com" }],
+        destination: "https://www.join2campus.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

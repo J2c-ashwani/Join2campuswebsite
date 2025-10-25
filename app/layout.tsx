@@ -38,6 +38,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* ✅ Google Site Verification (optional, helps AdSense verification) */}
+        <meta name="google-site-verification" content="YOUR_UNIQUE_CODE_HERE" />
+
         {/* Organization Schema */}
         <script
           type="application/ld+json"
@@ -74,20 +77,28 @@ export default function RootLayout({
             }),
           }}
         />
+
+        {/* ✅ Google AdSense Script (static for crawler verification) */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body className={`${inter.className} bg-gray-50 font-sans text-gray-800`}>
-        {/* ✅ Google AdSense Script - runs only on client */}
+        {/* Navigation and main content */}
+        <Navigation />
+        <main className="min-h-[70vh]">{children}</main>
+        <Footer />
+        <WhatsAppChat />
+
+        {/* Optional: load AdSense client-side script again if needed for dynamic ads */}
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-
-        <Navigation />
-        <main className="min-h-[70vh]">{children}</main>
-        <Footer />
-        <WhatsAppChat />
       </body>
     </html>
   )

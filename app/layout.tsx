@@ -5,6 +5,7 @@ import "./globals.css"
 import Navigation from "@/components/Navigation"
 import Footer from "@/components/Footer"
 import WhatsAppChat from "@/components/WhatsAppChat"
+import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -37,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Organization Schema for Google */}
+        {/* Organization Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -56,7 +57,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* WebSite Schema for Google */}
+        {/* Website Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -75,6 +76,14 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} bg-gray-50 font-sans text-gray-800`}>
+        {/* ✅ Google AdSense Script - runs only on client */}
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
         <Navigation />
         <main className="min-h-[70vh]">{children}</main>
         <Footer />

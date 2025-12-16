@@ -78,12 +78,7 @@ export default function RootLayout({
           }}
         />
 
-        {/* ✅ Google AdSense Script (static for crawler verification) */}
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200907614877581"
-          crossOrigin="anonymous"
-        ></script>
+
       </head>
       <body className={`${inter.className} bg-gray-50 font-sans text-gray-800`}>
         {/* Navigation and main content */}

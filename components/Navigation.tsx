@@ -22,6 +22,7 @@ export default function Navigation() {
     { href: "/services", label: "Our Services" },
     { href: "/countries", label: "Countries" },
     { href: "/testimonials", label: "Testimonials" },
+    { href: "/indian-institute-of-ai", label: "Institute of AI" },
     { href: "/contact", label: "Contact" },
   ]
 
@@ -46,11 +47,10 @@ export default function Navigation() {
             <Link
               key={href}
               href={href}
-              className={`transition duration-300 ${
-                isActive(href)
+              className={`transition duration-300 ${isActive(href)
                   ? "text-indigo-700 font-semibold"
                   : "text-gray-600 hover:text-indigo-700"
-              }`}
+                }`}
             >
               {label}
             </Link>
@@ -87,11 +87,10 @@ export default function Navigation() {
               key={href}
               href={href}
               onClick={() => setIsMenuOpen(false)} // Close menu on click
-              className={`block py-2 text-base transition duration-300 ${
-                isActive(href)
+              className={`block py-2 text-base transition duration-300 ${isActive(href)
                   ? "text-indigo-700 font-semibold"
                   : "text-gray-600 hover:text-indigo-700"
-              }`}
+                }`}
             >
               {label}
             </Link>

@@ -52,14 +52,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.3,
     }))
 
-    // Dynamic blog routes - high priority with images
+    // Dynamic blog routes - high priority
     const posts = getAllPosts()
     const blogRoutes = posts.map((post) => ({
         url: `${baseUrl}/blog/${post.slug}`,
         lastModified: new Date(post.publishedAt),
         changeFrequency: 'monthly' as const,
         priority: 0.9,
-        images: post.coverImage ? [post.coverImage] : undefined,
     }))
 
     return [homepage, ...primaryPages, ...blogRoutes, ...secondaryPages, ...legalPages]

@@ -16,6 +16,9 @@ export default function Footer() {
           <a href="/refund-cancellation" className="hover:text-indigo-400 transition duration-300">
             Refund & Cancellation
           </a>
+          <a href="/sitemap.xml" className="hover:text-indigo-400 transition duration-300">
+            Sitemap
+          </a>
         </div>
 
         <div className="mt-6 flex justify-center space-x-6">

@@ -38,6 +38,7 @@ export default function Navigation() {
             width={40}
             height={40}
             className="h-10 w-auto"
+            priority
           />
           <span className="text-2xl font-bold text-indigo-700">Join2Campus</span>
         </Link>

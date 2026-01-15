@@ -443,7 +443,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Navigating the APS, Uni-Assist updates, and Blocked Accounts can be overwhelming. We offer specialized support for international applicants ensuring your file is error-free.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Book a One-on-One Consultation
                     </a>
                 </div>
@@ -1014,7 +1014,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         From Campus France interviews to CAF applications, the French system is complex. Let us guide you to your Grande École admission.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Start Your French Journey
                     </a>
                 </div>
@@ -1659,7 +1659,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Navigating the CAS interview and the strict financial rules can be stressful. We ensure your application is watertight.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Book a Free Consultation
                     </a>
                 </div>
@@ -3017,7 +3017,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Finland is strict. The Joint Application system waits for no one. Comparing Nordics? Check out **[Study in Sweden](/blog/study-in-sweden-complete-guide-international-students)** for a similar vibe but different rules.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Get a Free Profile Evaluation
                     </a>
                 </div>
@@ -3552,7 +3552,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         The UniversityAdmissions.se system is strict. Missing a document means rejection. Comparing Nordics? Check out **[Study in Finland](/blog/study-in-finland-complete-guide-international-students)** too.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Book a One-on-One Session
                     </a>
                 </div>
@@ -4033,7 +4033,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Choosing the wrong type of university can block your access to a PhD or specific careers. Too expensive? Check **[Study in Poland](/blog/study-in-poland-complete-guide-international-students)**.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Get a Free Profile Evaluation
                     </a>
                 </div>
@@ -4522,7 +4522,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         The interview is the #1 reason for rejection. We conduct mock interviews to ensure you can answer every question confidently. Want a Schengen visa with less interview stress? Consider **[Malta](/blog/study-in-malta-complete-guide-international-students)**.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Book a Mock Interview
                     </a>
                 </div>
@@ -4992,7 +4992,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         The competition is fierce. Your **Motivation Letter** and **Nomination Strategy** make all the difference. Want another affordable option? Check **[Study in Poland](/blog/study-in-poland-complete-guide-international-students)**.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Review My Scholarship Application
                     </a>
                 </div>
@@ -5451,7 +5451,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Don't let a gap stop your dreams. We specialize in "difficult cases". Let us build a profile that highlights your experience over your gap. Want high-tech vibes instead? Check **[Study in Netherlands](/blog/study-in-netherlands-complete-guide-international-students)**.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Assess My Profile for Free
                     </a>
                 </div>
@@ -5903,7 +5903,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Admission to Top 50 US universities is holistic. It's not just grades; it's your story. We help you craft essays that stand out.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Review My Statement of Purpose
                     </a>
                 </div>
@@ -6345,7 +6345,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         One mistake in your GIC or PAL can cause a rejection. We handle the entire SDS filing process for you.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Check My SDS Eligibility
                     </a>
                 </div>
@@ -6781,7 +6781,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         A single wrong answer in your GTE statement can lead to a ban. We draft legal-grade GTE statements that prove your intent.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Draft My GTE Statement
                     </a>
                 </div>
@@ -7203,7 +7203,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Admissions are strict on academic matching. We help you choose the right program that fits your bachelor's background.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Assess My Eligibility
                     </a>
                 </div>
@@ -7612,7 +7612,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         This single document rejects 40% of applicants. We know which universities (FH) do not require it.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Find Me an FH University
                     </a>
                 </div>
@@ -8309,7 +8309,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Your scholarship application must be part of your admission file. We review your SOP to maximize scholarship chances.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Review My Profile for Scholarship
                     </a>
                 </div>
@@ -8923,7 +8923,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Don't let bureaucracy ruin your Spanish dream. We guide you through the degree verification process and TIE appointments.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Start My Application
                     </a>
                 </div>
@@ -9606,7 +9606,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         Don't let the paperwork scare you. We help you navigate the Pre-enrollment, CIMEA application, and Scholarship process.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Get Expert Guidance
                     </a>
                 </div>
@@ -10342,7 +10342,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         You can actually get your NIF number before you even fly. It saves you weeks of headache.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Get NIF Assistance
                     </a>
                 </div >
@@ -11041,7 +11041,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         We specialize in "Pathway Programs". Start in affordable Cyprus, finish in prestigious UK/Canada.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Plan My Transfer Route
                     </a>
                 </div>
@@ -11808,7 +11808,7 @@ export const blogPosts: BlogPost[] = [
                     <p className="text-slate-600 dark:text-slate-300 mb-6 max-w-xl mx-auto">
                         We know exactly which universities have "Internal Evaluation" so you can SKIP the government exam completely.
                     </p>
-                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary hover:bg-primary/90 transition-colors">
+                    <a href="/contact" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md !text-white bg-primary hover:bg-primary/90 transition-colors">
                         Find Me a No-Exam University
                     </a>
                 </div>

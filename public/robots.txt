@@ -1,11 +1,12 @@
 # Join2Campus - Robots.txt
-# https://join2campus.com
+# https://www.join2campus.com
 
 User-agent: *
 Allow: /
+Allow: /_next/image*
 
 # Sitemap
-Sitemap: https://join2campus.com/sitemap.xml
+Sitemap: https://www.join2campus.com/sitemap.xml
 
 # Disallow admin or private areas (if any)
 Disallow: /admin/

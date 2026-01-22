@@ -7,7 +7,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, Clock } from "lucide-react";
 
-const BASE_URL = "https://join2campus.com";
+const BASE_URL = "https://www.join2campus.com";
 
 // Generate metadata for each post
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

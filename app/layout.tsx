@@ -9,7 +9,7 @@ import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"], display: "swap" })
 
-const BASE_URL = "https://join2campus.com"
+const BASE_URL = "https://www.join2campus.com"
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { getAllPosts } from '@/lib/blog-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://join2campus.com'
+    const baseUrl = 'https://www.join2campus.com'
 
     // Homepage - highest priority
     const homepage = {

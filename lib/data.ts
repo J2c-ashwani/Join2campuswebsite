@@ -158,7 +158,7 @@ export const globalNetworkData = [
     flag: "/flags/np.png",
     consultants: "45+",
     students: "800+",
-    cities: ["Kathmandu", "Pokhara", "Lalitpur", "Bharatpur"],
+    cities: ["Kathmandu", "Pokhara", "Lalitpur", "Chitwan", "Nepalganj"],
     description: "Strong presence in Nepal's education consulting landscape",
   },
   {

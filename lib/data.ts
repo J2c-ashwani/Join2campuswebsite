@@ -253,12 +253,7 @@ export const teamData = [
     image: "/images/team/dheeraj-jha.jpg",
     bio: "Dheeraj Jha manages and strengthens partnerships with consultants and institutions, ensuring smooth collaboration and long-term relationships for Join2Campus.",
   },
-  {
-    name: "Suhana Singh",
-    title: "International Business Manager",
-    image: "/images/team/suhana-singh.jpg",
-    bio: "Suhana Singh guides and supports students in their study abroad journey, ensuring personalized solutions and a smooth admission process at Join2Campus.",
-  },
+
 ]
 export const partnershipBenefits = [
   {

@@ -3,7 +3,7 @@
 
 User-agent: *
 Allow: /
-Allow: /_next/image*
+Allow: /_next/image
 
 # Sitemap
 Sitemap: https://www.join2campus.com/sitemap.xml

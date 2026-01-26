@@ -19,6 +19,9 @@ export default function Footer() {
           <a href="/sitemap.xml" className="hover:text-indigo-400 transition duration-300">
             Sitemap
           </a>
+          <a href="/become-partner" className="hover:text-indigo-400 transition duration-300">
+            Become a Partner
+          </a>
         </div>
 
         <div className="mt-6 flex justify-center space-x-6">

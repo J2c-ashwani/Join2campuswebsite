@@ -5,7 +5,7 @@ export default function UniversitiesPage() {
     <div className="p-8 space-y-6">
       <div>
         <h1 className="text-3xl font-bold">Partner Universities</h1>
-        <p className="text-gray-600">Explore 217+ universities across Europe</p>
+        <p className="text-gray-600">Browse partner universities across Europe</p>
       </div>
       <UniversityTable />
     </div>

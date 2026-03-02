@@ -2,9 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import Navigation from "@/components/Navigation"
-import Footer from "@/components/Footer"
-import WhatsAppChat from "@/components/WhatsAppChat"
+import ConditionalLayout from "@/components/ConditionalLayout"
 import Script from "next/script"
 
 const inter = Inter({ subsets: ["latin"], display: "swap" })
@@ -132,11 +130,9 @@ export default function RootLayout({
 
       </head>
       <body className={`${inter.className} bg-gray-50 font-sans text-gray-800`}>
-        {/* Navigation and main content */}
-        <Navigation />
-        <main className="min-h-[70vh]">{children}</main>
-        <Footer />
-        <WhatsAppChat />
+        <ConditionalLayout>
+          {children}
+        </ConditionalLayout>
 
         {/* Optional: load AdSense client-side script again if needed for dynamic ads */}
         <Script
